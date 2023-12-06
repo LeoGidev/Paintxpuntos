@@ -24,3 +24,9 @@ def mouse_handler(event, x, y, flags, param):
         if len(vertices) > 0:
             vertices[-1] = (x, y)
 
+# Crear una imagen en blanco
+image = np.zeros((500, 500, 3), dtype=np.uint8)
+
+# Crear una ventana y asociar la función de manejo del mouse
+cv2.namedWindow("Arrastrar Vértices")
+cv2.setMouseCallback("Arrastrar Vértices", mouse_handler)
